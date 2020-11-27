@@ -1,5 +1,4 @@
 class AdminProduct < ApplicationRecord
-
-  belongs_to :AdminUser
-  belongs_to :Product
+  belongs_to :product
+  belongs_to :admin_user
 end

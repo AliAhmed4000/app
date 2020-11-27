@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
+  quantity: 1
   price: 9.99
-  category: one
+  order: one
+  product_belongs_to: MyString
 
 two:
-  name: MyString
-  description: MyText
+  quantity: 1
   price: 9.99
-  category: two
+  order: two
+  product_belongs_to: MyString

@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  rating: 9.99
+  comment: MyText
+  customer: one
   product: one
-  admin_user: one
 
 two:
+  rating: 9.99
+  comment: MyText
+  customer: two
   product: two
-  admin_user: two

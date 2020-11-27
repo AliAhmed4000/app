@@ -5,6 +5,7 @@ class AdminUser < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
         has_many :admin_products
-        
+        has_many :products, through: :admin_products
+
 
 end

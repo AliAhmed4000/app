@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content: MyText
+  owner_id: 1
+  notification_reciever: one
+
+two:
+  title: MyString
+  content: MyText
+  owner_id: 1
+  notification_reciever: two
