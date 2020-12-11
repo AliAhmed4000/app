@@ -5,7 +5,7 @@ ActiveAdmin.register Customer do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at
+   permit_params :email, :first_name, :last_name
   #
   # or
   #
@@ -14,5 +14,14 @@ ActiveAdmin.register Customer do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+  form do |f|
+    f.inputs do
+      f.inputs :first_name
+      f.input :last_name
+      f.input :email
+    end
+   f.actions
+  end
+
+
 end

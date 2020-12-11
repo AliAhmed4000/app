@@ -5,7 +5,7 @@ ActiveAdmin.register Category do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :name, :description
+   permit_params :name, :description, images: []
   #
   # or
   #
@@ -14,5 +14,27 @@ ActiveAdmin.register Category do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+  show do
+   attributes_table do
+     row :name
+     row :description
+     row :images do |category|
+       if category.images.attached?
+       category.images.each do | imgg |
+         div do
+            image_tag url_for(imgg)
+            end
+          end
+        end
+       end
+     end
+   end
+
+     form do |f|
+       f.inputs do
+         f.inputs
+         f.input :images, as: :file, input_html: { multiple: true }
+       end
+      f.actions
+     end
 end

@@ -1,0 +1,16 @@
+<%= render partial: "user/navbar"%>
+<div class="container card">
+  <br>
+<% @categories.each do | p |%>
+<ul>
+    <li> <b style="font-size: 20px;">  Name </b><%= p.name%></li>
+    <li> <b style="font-size: 20px;"> Description</b><%= p.description%></li>
+    <%= link_to "Product Details", products_show_path, class: "btn btn-info " %>
+    <%= link_to "Go Back", :back, class: "btn btn-secondary " %>
+<hr>
+ <%=image_tag(url_for(p.images.first), class: "img-fluid w-50") %>
+</ul>
+<% end %>
+</div>
+<br>
+<%= render partial: "user/footer"%>
