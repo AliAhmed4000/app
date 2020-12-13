@@ -33,7 +33,7 @@
 <body>
 
   <!-- navbar -->
-  <%= render partial: "user/navbar"%>
+  <%= render partial: "partials/navbar"%>
   <!-- HERO SECTION-->
 <div class="container">
 <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url(img/hero-banner-alt.jpg)">
@@ -49,10 +49,10 @@
 </section>
 <!-- CATEGORIES SECTION-->
 
-<%= render partial: "user/category"%>
+<%= render partial: "partials/category"%>
 
 <!-- TRENDING PRODUCTS-->
-<%= render partial: "user/product"%>
+<%= render partial: "partials/product"%>
 
 
 <!-- SERVICES-->
@@ -126,7 +126,7 @@
 
 <!-- footer -->
 
-<%= render partial: "user/footer"%>
+<%= render partial: "partials/footer"%>
 
 <!-- JavaScript files-->
 <script src="distribution/vendor/jquery/jquery.min.js"></script>
@@ -157,6 +157,6 @@ injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
 </script>
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-</div>
+
 </body>
 </html>

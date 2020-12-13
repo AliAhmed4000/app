@@ -50,6 +50,11 @@
                 <i class="fas fa-user-alt mr-1 text-gray"></i>Login
                 <%end%>
             </li>
+            <li class="nav-item">
+              <%= link_to destroy_customer_session_path, method: :delete, class:"nav-link" do %>
+                <i class="fas fa-user-alt mr-1 text-gray"></i>Logout
+                <%end%>
+            </li>
           </ul>
         </div>
       </nav>
@@ -106,7 +111,7 @@
                     </div>
                   </div>
                   <div class="col-sm-5 pl-sm-0">
-                    <a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="cart.html">Add to cart</a>
+                    <a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="#">Add to cart</a>
                   </div>
                 </div>
                 <a class="btn btn-link text-dark p-0" href="#">

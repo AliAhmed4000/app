@@ -1,4 +1,4 @@
-<%= render partial: "user/navbar"%>
+<%= render partial: "partials/navbar"%>
 <div class="container card">
   <br>
 <% @categories.each do | p |%>
@@ -8,9 +8,9 @@
     <%= link_to "Product Details", products_show_path, class: "btn btn-info " %>
     <%= link_to "Go Back", :back, class: "btn btn-secondary " %>
 <hr>
- <%=image_tag(url_for(p.images.first), class: "img-fluid w-50") %>
+ <%=image_tag(url_for(p.images[0]), class: "img-fluid w-50") %>
 </ul>
 <% end %>
 </div>
 <br>
-<%= render partial: "user/footer"%>
+<%= render partial: "partials/footer"%>
