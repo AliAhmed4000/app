@@ -1,19 +1,29 @@
 <%= render partial: "partials/navbar"%>
-
-<hr>
-<div class="container">
-
-
+<div  style="
+background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+<div class="container" style="margin-bottom: -16px;">
 <ul>
-<% @products.each do | p |%>
-<li> <b style="font-size: 20px;">  Name </b><%= p.name%></li>
-<li> <b style="font-size: 20px;">  Description</b>   <%= p.description%></li>
-<%= link_to "Go Back", :back, class: "btn btn-danger " %>
-<hr>
- <%=image_tag(url_for(p.images.first), class: "img-fluid w-50") %>
-<% end %>
+  <% @products.each do | p |%>
+  <div class="d-flex justify-content-sm-between text-white mb-3  ">
+    <div class="">
+      <%=image_tag(url_for(p.images.first), style: "width: 150px; height: 150px;")  %>
+    </div>
+    <div class="p-5 ">
+      <h5><%= p.name%></h5>
+      <h6>Rs<%= p.price%></h6>
+    </div>
+    <div class="p-5 ">
+      <%= p.description%>
+    </div>
+    <div class="p-5 ml-3">
+      <%= link_to "Go Back", :back, class: "btn btn-dark" %>
+    </div>
+  </div>
+  <% end %>
 </ul>
-
 </div>
-
+</div>
 <%= render partial: "partials/footer"%>

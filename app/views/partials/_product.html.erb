@@ -29,10 +29,12 @@
               </ul>
             </div>
           </div>
-          <h6>
-            <%= link_to "Polo Shirt", products_show_path, class: "d-block"%>
+          <h6 class ="d-block">
+            <%= link_to products_show_path do %>
+            <%= pro.name %>
+            <%end%>
           </h6>
-          <p class="small text-muted">$250</p>
+          <p class="small text-muted">Rs <%= pro.price%></p>
         </div>
       </div>
     <% end %>
