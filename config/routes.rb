@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'favourites/index'
+  get 'favourites/show'
   get 'category/show'
   get 'products/show'
+  get 'products/fav'
   devise_for :customers
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

@@ -33,6 +33,7 @@
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
+            <% if customer_signed_in?%>
             <li class="nav-item">
               <a class="nav-link" href="cart.html">
                 <i class="fas fa-dolly-flatbed mr-1 text-gray"></i>Cart<small class="text-gray">(2)</small>
@@ -42,19 +43,22 @@
               <a class="nav-link" href="#">
                 <i class="far fa-heart mr-1"></i>
                 <small class="text-gray">
-                  (0)</small>
+                  (heart)</small>
               </a>
             </li>
             <li class="nav-item">
-              <%= link_to new_customer_session_path, class:"nav-link" do %>
-                <i class="fas fa-user-alt mr-1 text-gray"></i>Login
-                <%end%>
-            </li>
-            <li class="nav-item">
               <%= link_to destroy_customer_session_path, method: :delete, class:"nav-link" do %>
-                <i class="fas fa-user-alt mr-1 text-gray"></i>Logout
+                <i class="fas fa-user-alt mr-1 text-gray"></i>Log Out
                 <%end%>
             </li>
+            <% elsif %>
+            <li class="nav-item">
+              <%= link_to new_customer_session_path, class:"nav-link" do %>
+                <i class="fas fa-user-alt mr-1 text-gray"></i>Log In
+                <%end%>
+            </li>
+            <% end %>
+
           </ul>
         </div>
       </nav>

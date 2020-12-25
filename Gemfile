@@ -71,3 +71,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "awesome_print"
 gem 'toastr_rails'
+gem 'acts_as_favoritor'

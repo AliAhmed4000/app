@@ -7,5 +7,5 @@ class AdminUser < ApplicationRecord
         has_many :admin_products
         has_many :products, through: :admin_products
 
-
+        
 end

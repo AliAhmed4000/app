@@ -1,16 +1,15 @@
 <%= render partial: "partials/navbar"%>
-<div class="container card">
-  <br>
+<div class="d-flex justify-content-between container mb-2 ">
 <% @categories.each do | p |%>
-<ul>
-    <li> <b style="font-size: 20px;">  Name </b><%= p.name%></li>
-    <li> <b style="font-size: 20px;"> Description</b><%= p.description%></li>
+<div class="card mr-2" style="width: 18rem;">
+  <%=image_tag(url_for(p.images[0]),class: "img-fluid" ,style: " height: 180px; width: 275px;") %>
+  <div class="card-body">
+    <h5 class="card-title"><%= p.name%></h5>
+    <p class="card-text"><%= p.description%></p>
     <%= link_to "Product Details", products_show_path, class: "btn btn-info " %>
     <%= link_to "Go Back", :back, class: "btn btn-secondary " %>
-<hr>
- <%=image_tag(url_for(p.images[0]), class: "img-fluid w-50") %>
-</ul>
+  </div>
+</div>
 <% end %>
 </div>
-<br>
 <%= render partial: "partials/footer"%>

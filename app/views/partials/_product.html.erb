@@ -12,10 +12,10 @@
             <div class="badge text-white badge-"></div>
             <%=image_tag(url_for(pro.images.first), class: "img-fluid w-100") %>
             <div class="product-overlay">
-              <ul class="mb-0 list-inline">
+              <ul class="mb-0 list-inline btnn" >
                 <li class="list-inline-item m-0 p-0">
-                  <a class="btn btn-sm btn-outline-dark" href="#">
-                    <i class="far fa-heart"></i>
+                  <a class="btn btn-sm btn-outline-dark " href="#">
+                    <i class="far fa-heart thissss" ></i>
                   </a>
                 </li>
                 <li class="list-inline-item m-0 p-0">
@@ -40,3 +40,23 @@
     <% end %>
   </div>
 </section>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+        $(".btn-outline-dark").click(function(event){
+      event.preventDefault();
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".btnn").click(function(){
+      $(".thissss").toggleClass("redclass");
+      $.ajax({
+  type: "GET",
+  url: 'products/show',
+  data: mydata
+  
+  });
+</script>
