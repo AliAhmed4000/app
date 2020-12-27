@@ -10,11 +10,11 @@
         <div class="product text-center">
           <div class="position-relative mb-3">
             <div class="badge text-white badge-"></div>
-            <%=image_tag(url_for(pro.images.first), class: "img-fluid w-100", style: "height: 270px;") %>
+            <%=image_tag(url_for(pro.images.first), class: "img-fluid w-100", style: "height: 250px;") %>
             <div class="product-overlay">
               <ul class="mb-0 list-inline btnn" >
                 <li class="list-inline-item m-0 p-0">
-                    <%= link_to new_favourite_path, class: "btn btn-sm btn-outline-dark ", method: "post", remote: true do %>
+                    <%= link_to favourites_path, class: "btn btn-sm btn-outline-dark ", method: "post", remote: true do %>
                     <i class="far fa-heart thissss" ></i>
                     <%end%>
                 </li>
