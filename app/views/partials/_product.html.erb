@@ -14,10 +14,9 @@
             <div class="product-overlay">
               <ul class="mb-0 list-inline btnn" >
                 <li class="list-inline-item m-0 p-0">
-                  <a class="btn btn-sm btn-outline-dark " href="#">
-                    <%= link_to favourites_path, class: "btn btn-sm btn-outline-dark ", method: "post", remote: true %>
+                    <%= link_to new_favourite_path, class: "btn btn-sm btn-outline-dark ", method: "post", remote: true do %>
                     <i class="far fa-heart thissss" ></i>
-                  </a>
+                    <%end%>
                 </li>
                 <li class="list-inline-item m-0 p-0">
                   <a class="btn btn-sm btn-dark" href="#">Add to cart</a>
