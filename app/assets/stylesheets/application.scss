@@ -1,5 +1,16 @@
 @import "bootstrap";
-//= require toastr_rails
+@import "toastr_rails";
+@import "theme/custom";
+@import "theme/style.blue";
+@import "theme/style.default";
+@import "theme/style.gold";
+@import "theme/style.green";
+@import "theme/style.pink";
+@import "theme/style.red";
+@import "theme/style.sea";
+@import "theme/style.violet";
+
+
 .redclass{
   color: red;
 }

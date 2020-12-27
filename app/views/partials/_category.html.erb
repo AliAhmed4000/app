@@ -6,7 +6,7 @@
   <div class="row">
   <div class="col-md-4 mb-4 mb-md-0">
     <div class="category-item">
-    <%=image_tag(url_for(@categories.third.images[0]) , class: "img-fluid ") %>
+    <%=image_tag(url_for(@categories.first.images[0]) , class: "img-fluid ") %>
     <%= link_to "Clothes", category_show_path, class: "category-item-title"%>
     </div>
   </div>
@@ -14,18 +14,18 @@
 <div class="col-md-4 mb-4 mb-md-0 ">
   <div class="category-item mb-4">
     <%=image_tag(url_for(@categories.second.images[0]), class: "img-fluid") %>
-    <%= link_to "Laptops", category_show_path, class: "category-item-title"%>
+    <%= link_to "Mobiles", category_show_path, class: "category-item-title"%>
   </div>
   <div class="category-item">
-    <%=image_tag(url_for(@categories.fourth.images[0]), class: "img-fluid") %>
+    <%=image_tag(url_for(@categories.third.images[0]), class: "img-fluid") %>
     <%= link_to "Laptops", category_show_path, class: "category-item-title"%>
   </div>
 </div>
 
  <div class="col-md-4">
    <div class="category-item">
-    <%=image_tag(url_for(@categories.first.images[0]),class: "img-fluid h-100") %>
-    <%= link_to "Mobiles", category_show_path, class: "category-item-title"%>
+    <%=image_tag(url_for(@categories.fourth.images[0]),class: "img-fluid", style: "height: 490px;") %>
+    <%= link_to "Electronics", category_show_path, class: "category-item-title"%>
    </div>
   </div>
  </div>

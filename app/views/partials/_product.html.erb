@@ -10,11 +10,12 @@
         <div class="product text-center">
           <div class="position-relative mb-3">
             <div class="badge text-white badge-"></div>
-            <%=image_tag(url_for(pro.images.first), class: "img-fluid w-100") %>
+            <%=image_tag(url_for(pro.images.first), class: "img-fluid w-100", style: "height: 270px;") %>
             <div class="product-overlay">
               <ul class="mb-0 list-inline btnn" >
                 <li class="list-inline-item m-0 p-0">
                   <a class="btn btn-sm btn-outline-dark " href="#">
+                    <%= link_to favourites_path, class: "btn btn-sm btn-outline-dark ", method: "post", remote: true %>
                     <i class="far fa-heart thissss" ></i>
                   </a>
                 </li>
@@ -47,16 +48,8 @@
       event.preventDefault();
     });
   });
-</script>
-
-<script type="text/javascript">
-  $(document).ready(function(){
     $(".btnn").click(function(){
-      $(".thissss").toggleClass("redclass");
-      $.ajax({
-  type: "GET",
-  url: 'products/show',
-  data: mydata
-  
+      $(this).find(".thissss").toggleClass("redclass");
+
   });
 </script>
