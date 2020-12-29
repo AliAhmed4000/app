@@ -20,6 +20,11 @@
 
   <body>
     <%= yield %>
+    <% if notice%>
+      <p class="notice"><%= notice%></p>
+    <%else%>
+      <p class="alert"><%= alert%></p>
+  <%end%>
 
 
   </body>
